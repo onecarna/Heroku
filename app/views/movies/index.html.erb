@@ -1,0 +1,15 @@
+<h1>RetFlix</h1>
+<p>Welcome to RetFlix! See our collection of movies below.</p>
+
+<h3><%= link_to "+ Add Movie Here!", new_movie_path %></h3>
+
+<%= form_tag "/", method: "GET" do %>
+  <%= text_field_tag :q, params[:q] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<br/>
+
+<%= render "list" %>
+
+
